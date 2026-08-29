@@ -79,6 +79,9 @@ python tools/test.py \
 
 ## Model zoo
 
+Please download the official pre-trained weights from https://github.com/Sudhandar/ResNet-50-model, https://github.com/hitachinsk/SAMed and [https://github.com/hitachinsk/SAMed](https://github.com/HUMMMZ/MRU-Net). All baseline models in our experiments start with these weights. 
+In addition, we provide the DAPNet model weights for X-ray security inspection, medical segmentation, and remote sensing analysis at 通过网盘分享的文件：DAPNet.zip
+链接: https://pan.baidu.com/s/14oPAaGXBcfMOAl09Gi1YXw 提取码: dapn for further evaluation.
 
 
 ---
