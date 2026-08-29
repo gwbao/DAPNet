@@ -45,6 +45,9 @@ We provide loaders for major datasets used in the paper:
 
 * **Medical Imaging:**
   [Medical Imaging Dataset](https://drive.google.com/file/d/1p33nsWQaiZMAgsruDoJLyatoq5XAH-TH/view)
+  
+* **Traditional cross-domain scenario:**
+  [ Cityscapes → Foggy Cityscapes]([https://drive.google.com/file/d/1p33nsWQaiZMAgsruDoJLyatoq5XAH-TH/view](https://github.com/EstrellaXyu/Differential-Alignment-for-DAOD/blob/initial-commit/docs/DATASETS.md))
 
 ---
 
@@ -53,15 +56,30 @@ We provide loaders for major datasets used in the paper:
 ### Train DAPNet
 
 ```bash
-python tools/train.py configs/uda/potsdam_vaihingen_stage1.py --work-dir output/xxx --seed 1337
-python tools/train.py configs/uda/potsdam_vaihingen_stage2.py --work-dir output/xxx --seed 1337
+python tools/train.py \
+    configs/uda/potsdam_vaihingen_stage1.py \
+    --work-dir output/xxx \
+    --seed 1337
+python tools/train.py \
+    configs/uda/potsdam_vaihingen_stage2.py \
+    --work-dir output/xxx \
+    --seed 1337
 ```
 
 ### Test
 
 ```bash
-python tools/test.py configs/uda/test_potsdam_vaihingen.py output/xxx.pth --eval mIoU mF1 --show-dir output/xx
+python tools/test.py \
+    configs/uda/test_potsdam_vaihingen.py \
+    output/xxx.pth \
+    --eval mIoU mF1 \
+    --show-dir output/xx
 ```
+---
+
+## Model zoo
+
+
 
 ---
 
