@@ -148,14 +148,6 @@ In addition, we provide the DAPNet model weights for X-ray security inspection, 
 ## Citation
 
 ```bibtex
-@inproceedings{ma2024constructing,
-  title={Constructing and exploring intermediate domains in mixed domain semi-supervised medical image segmentation},
-  author={Ma, Qinghe and Zhang, Jian and Qi, Lei and Yu, Qian and Shi, Yinghuan and Gao, Yang},
-  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
-  pages={11642--11651},
-  year={2024}
-}
-
 @inproceedings{he2025differential,
   title={Differential Alignment for Domain Adaptive Object Detection},
   author={He, Xinyu and Li, Xinhui and Guo, Xiaojie},
@@ -175,10 +167,4 @@ In addition, we provide the DAPNet model weights for X-ray security inspection, 
   organization={IEEE}
 }
 
-@article{ma2024decomposition,
-  title={Decomposition-based unsupervised domain adaptation for remote sensing image semantic segmentation},
-  author={Ma, Xianping and Zhang, Xiaokang and Ding, Xingchen and Pun, Man-On and Ma, Siwei},
-  journal={IEEE Transactions on Geoscience and Remote Sensing},
-  year={2024},
-  publisher
 ```
