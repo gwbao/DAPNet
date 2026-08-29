@@ -6,7 +6,7 @@
 
 In this paper:
 
-  1） We identify a practical UDA challenge termed ``Small shift, Large gap”, where subtle hardware-induced variations in specialized imaging systems, though barely perceptible in image space, lead to significant feature distribution gaps and degrade cross-domain performance.
+  1） We identify a practical UDA challenge termed **``Small shift, Large gap”**, where subtle hardware-induced variations in specialized imaging systems, though barely perceptible in image space, lead to significant feature distribution gaps and degrade cross-domain performance.
   
   2） We propose DAPNet, a domain-agnostic purification framework that addresses subtle domain shift through a synergistic ``expose-then-refine” mechanism: SASM exposes latent domain bias as learnable cross-domain contrastive signals through semantically constrained cross domain feature synthesis, while ACRM leverages the resulting domain feedback to estimate channel-level stability and refine domain-stable semantic representations.
   
