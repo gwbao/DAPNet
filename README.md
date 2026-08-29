@@ -24,6 +24,11 @@ conda activate dapnet
 
 pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
 pip install mmcv==1.7.1 -f https://download.openmmlab.com/mmcv/dist/cu117/torch1.13/index.html
+
+pip install openmim mmengine
+mim install "mmcv>=2.0.0rc4"
+pip install git+https://github.com/lvis-dataset/lvis-api.git
+mim install mmdet>=3.0.0rc6
 ```
 
 ---
