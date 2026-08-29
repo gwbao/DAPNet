@@ -48,7 +48,67 @@ We provide loaders for major datasets used in the paper:
   
 * **Traditional cross-domain scenario:**
   [ Cityscapes → Foggy Cityscapes]([https://drive.google.com/file/d/1p33nsWQaiZMAgsruDoJLyatoq5XAH-TH/view](https://github.com/EstrellaXyu/Differential-Alignment-for-DAOD/blob/initial-commit/docs/DATASETS.md))
+ You can follow [these instructions](https://github.com/EstrellaXyu/Differential-Alignment-for-DAOD/blob/initial-commit/docs/DATASETS.md) to reproduce the datasets we used.
+And all datasets are expected to be organized in the following structure:
+```bash
+datasets/
+    EDS_split/
+        domain1/
+            annotations/
+                test.json
+                train.json
+            test/
+                images/
+                labels/
+            train/
+                ...
+        domain2/
+            ...
+        domain3/
+            ...
+    Fundus/
+        Domain1/
+            test/
+                image/
+                mask/
+            train/
+                image/
+                mask/
+        Domain2/
+            ...
+        Domain3/
+            ...
+        Domain4/
+            ...
+    ISPRS/
+        potsdam_tiles/
+            test/
+                images/
+                labels/
+            train/
+                ...
+            test.txt
+            train.txt
+        vaihingen_tiles/
+            ...
+    cityscapes/
+        leftImg8bit/
+        leftImg8bit_foggy/
+        annotations/
+            cityscapes_train_instances.json
+            ...
+```
+After organizing the dataset, you can preceed to configure the corresponding dictionary paths in the dataset.py like:
+```bash
+# EDS 
+register_coco_instances("eds_domain1_train", {},   "",   "")
+register_coco_instances("eds_domain2_train", {},     "",     ")
+register_coco_instances("eds_domain3_train", {},     "",   "")
 
+register_coco_instances("eds_domain1_test", {},   "",   "")
+register_coco_instances("eds_domain2_test", {},     "",   "")
+register_coco_instances("eds_domain3_test", {},    "",   "")
+```
 ---
 
 ## Training & Test
@@ -80,8 +140,7 @@ python tools/test.py \
 ## Model zoo
 
 Please download the official pre-trained weights from https://github.com/Sudhandar/ResNet-50-model, https://github.com/hitachinsk/SAMed and [https://github.com/hitachinsk/SAMed](https://github.com/HUMMMZ/MRU-Net). All baseline models in our experiments start with these weights. 
-In addition, we provide the DAPNet model weights for X-ray security inspection, medical segmentation, and remote sensing analysis at 通过网盘分享的文件：DAPNet.zip
-链接: https://pan.baidu.com/s/14oPAaGXBcfMOAl09Gi1YXw 提取码: dapn for further evaluation.
+In addition, we provide the DAPNet model weights for X-ray security inspection, medical segmentation, and remote sensing analysis at https://pan.baidu.com/s/14oPAaGXBcfMOAl09Gi1YXw(dapn) for further evaluation.
 
 
 ---
