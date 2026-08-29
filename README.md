@@ -2,6 +2,14 @@
 
 **Note:** This repository provides the official implementation of **DAPNet (Domain-Agnostic Purification Network)**, a method designed to address subtle and fine-grained domain shifts commonly found in professional imaging scenarios, such as X-ray security inspection, remote sensing land-cover segmentation, and medical image analysis.
 
+In this paper:
+\begin{itemize}
+  % \item We introduce the task of "small shifts, large gap", caused by hardware parameters in real-world industrial applications, which has not been extensively explored previously.
+  \item We identify a practical UDA challenge termed ``Small shift, Large gap”, where subtle hardware-induced variations in specialized imaging systems, though barely perceptible in image space, lead to significant feature distribution gaps and degrade cross-domain performance.
+  \item We propose DAPNet, a domain-agnostic purification framework that addresses subtle domain shift through a synergistic ``expose-then-refine” mechanism: SASM exposes latent domain bias as learnable cross-domain contrastive signals \rev{through semantically constrained cross domain feature synthesis}, while ACRM leverages the resulting domain feedback to estimate channel-level stability and refine domain-stable semantic representations.
+  \item Extensive experiments across multiple scenarios, including \textbf{X-ray security inspection}, \textbf{medical segmentation}, and \textbf{remote sensing analysis}, demonstrate that DAPNet outperforms other UDA methods under challenging subtle domain shift scenarios.
+\end{itemize}
+
 ---
 
 ## Installation
