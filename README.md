@@ -3,12 +3,10 @@
 **Note:** This repository provides the official implementation of **DAPNet (Domain-Agnostic Purification Network)**, a method designed to address subtle and fine-grained domain shifts commonly found in professional imaging scenarios, such as X-ray security inspection, remote sensing land-cover segmentation, and medical image analysis.
 
 In this paper:
-\begin{itemize}
-  % \item We introduce the task of "small shifts, large gap", caused by hardware parameters in real-world industrial applications, which has not been extensively explored previously.
-  \item We identify a practical UDA challenge termed ``Small shift, Large gap”, where subtle hardware-induced variations in specialized imaging systems, though barely perceptible in image space, lead to significant feature distribution gaps and degrade cross-domain performance.
-  \item We propose DAPNet, a domain-agnostic purification framework that addresses subtle domain shift through a synergistic ``expose-then-refine” mechanism: SASM exposes latent domain bias as learnable cross-domain contrastive signals \rev{through semantically constrained cross domain feature synthesis}, while ACRM leverages the resulting domain feedback to estimate channel-level stability and refine domain-stable semantic representations.
-  \item Extensive experiments across multiple scenarios, including \textbf{X-ray security inspection}, \textbf{medical segmentation}, and \textbf{remote sensing analysis}, demonstrate that DAPNet outperforms other UDA methods under challenging subtle domain shift scenarios.
-\end{itemize}
+  1） We identify a practical UDA challenge termed ``Small shift, Large gap”, where subtle hardware-induced variations in specialized imaging systems, though barely perceptible in image space, lead to significant feature distribution gaps and degrade cross-domain performance.
+  2） We propose DAPNet, a domain-agnostic purification framework that addresses subtle domain shift through a synergistic ``expose-then-refine” mechanism: SASM exposes latent domain bias as learnable cross-domain contrastive signals through semantically constrained cross domain feature synthesis, while ACRM leverages the resulting domain feedback to estimate channel-level stability and refine domain-stable semantic representations.
+ 3）Extensive experiments across multiple scenarios, including **X-ray security inspection**, **medical segmentation**, and **remote sensing analysis**}, demonstrate that DAPNet outperforms other UDA methods under challenging subtle domain shift scenarios.
+
 
 ---
 
@@ -45,14 +43,14 @@ We provide loaders for major datasets used in the paper:
 ### Train DAPNet
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python tools/train.py configs/uda/potsdam_vaihingen_stage1.py --work-dir output/xxx --seed 1337
-CUDA_VISIBLE_DEVICES=0 python tools/train.py configs/uda/potsdam_vaihingen_stage2.py --work-dir output/xxx --seed 1337
+python tools/train.py configs/uda/potsdam_vaihingen_stage1.py --work-dir output/xxx --seed 1337
+python tools/train.py configs/uda/potsdam_vaihingen_stage2.py --work-dir output/xxx --seed 1337
 ```
 
 ### Test
 
 ```bash
-CUDA_VISIBLE_DEVICES=1 python tools/test.py configs/uda/test_potsdam_vaihingen.py output/xxx.pth --eval mIoU mF1 --show-dir output/xx
+python tools/test.py configs/uda/test_potsdam_vaihingen.py output/xxx.pth --eval mIoU mF1 --show-dir output/xx
 ```
 
 ---
